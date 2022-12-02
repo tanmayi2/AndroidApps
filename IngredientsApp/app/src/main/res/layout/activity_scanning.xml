@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScanningActivity">
+
+    <ImageView
+        android:id="@+id/resizeImageView"
+        android:layout_width="360dp"
+        android:layout_height="473dp"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <com.example.ingredientsapp.GraphicOverlay
+        android:id="@+id/graphic_overlay"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_constraintTop_toTopOf="@id/resizeImageView"
+        app:layout_constraintBottom_toBottomOf="@id/resizeImageView"
+        app:layout_constraintLeft_toLeftOf="@id/resizeImageView"
+        app:layout_constraintRight_toRightOf="@id/resizeImageView"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="70dp"
+        android:text="Scanning..."
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resizeImageView" />
+</androidx.constraintlayout.widget.ConstraintLayout>
